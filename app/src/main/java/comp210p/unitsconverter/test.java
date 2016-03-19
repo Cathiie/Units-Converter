@@ -7,5 +7,12 @@ import android.os.SystemClock;
  */
 public class test {
 
+ahsbiadb
+    agaweg
 
+    public ahsbiadb getAgaweg() {
+        agawegageg
+                aegaeg
+                aegaeg
+    }
 }
