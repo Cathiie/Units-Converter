@@ -3,10 +3,10 @@ package Units;
 /**
  * Created by xulian on 19/03/2016.
  */
-import java.util.Scanner;
+
 import java.text.DecimalFormat;
 public class Length {
-    private static Scanner scan = new Scanner(System.in);
+
     private static DecimalFormat threeDecPlc = new DecimalFormat("0.000");
     private static double inM, inInch, inFoot, inMile, inYard, inCmeter, inMmeter, inKmeter;
     private final double METER_TO_INCH = 39.3701;
@@ -100,31 +100,116 @@ public class Length {
         inMmeter = input * METER_TO_MMETER / METER_TO_MILE;
     }
 
+    public void mm_foot (double input) {
 
+        inFoot = input / METER_TO_MMETER * METER_TO_FOOT;
+        inMmeter = input * METER_TO_MMETER / METER_TO_FOOT;
+    }
 
+    public void mm_yard (double input)
+    {
+        inYard = input / METER_TO_MMETER * METER_TO_YARD;
+        inMmeter = input * METER_TO_MMETER / METER_TO_YARD;
+    }
 
+    public void mm_km (double input)
+    {
+        inKmeter = input / METER_TO_MMETER * METER_TO_KMETER;
+        inMmeter = input * METER_TO_MMETER / METER_TO_KMETER;
+    }
 
+    public void km_mile (double input)
+    {
+        inMile = input / METER_TO_KMETER * METER_TO_MILE;
+        inKmeter = input * METER_TO_KMETER / METER_TO_MILE;
+    }
 
+    public void km_inch (double input)
+    {
+        inInch = input / METER_TO_KMETER * METER_TO_INCH;
+        inKmeter = input * METER_TO_KMETER / METER_TO_INCH;
+    }
 
+    public void km_foot (double input)
+    {
+        inFoot = input / METER_TO_KMETER * METER_TO_FOOT;
+        inKmeter = input * METER_TO_KMETER / METER_TO_FOOT;
+    }
 
+    public void km_yard (double input)
+    {
+        inYard = input / METER_TO_KMETER * METER_TO_YARD;
+        inKmeter = input * METER_TO_KMETER / METER_TO_YARD;
+    }
+    public void inch_mile (double input)
+    {
+        inMile = input / METER_TO_INCH * METER_TO_MILE;
+        inInch = input * METER_TO_INCH / METER_TO_MILE;
+    }
 
+    public void inch_foot (double input)
+    {
+        inFoot = input / METER_TO_INCH * METER_TO_FOOT;
+        inInch = input * METER_TO_INCH / METER_TO_FOOT;
+    }
 
+    public void inch_yard (double input)
+    {
+        inYard = input / METER_TO_INCH * METER_TO_YARD;
+        inInch = input *METER_TO_INCH / METER_TO_YARD;
+    }
 
+    public void mile_foot (double input)
+    {
+        inFoot = input / METER_TO_MILE * METER_TO_FOOT;
+        inMile = input * METER_TO_MILE / METER_TO_FOOT;
+    }
 
+    public void mile_yard (double input)
+    {
+        inYard = input / METER_TO_MILE * METER_TO_YARD;
+        inMile = input * METER_TO_MILE / METER_TO_YARD;
+    }
 
+    public void foot_yard (double input)
+    {
+        inYard = input / METER_TO_FOOT * METER_TO_YARD;
+        inFoot = input * METER_TO_FOOT / METER_TO_YARD;
+    }
 
+    public double convertMtoCM (double input)
+    {
+        m_cm(input);
+        return inCmeter;
+    }
 
+    public double convertCMtoM (double input)
+    {
+        m_cm(input);
+        return inM;
+    }
 
+    public double convertMtoMM (double input)
+    {
+        m_mm(input);
+        return inMmeter;
+    }
 
+    public double convertMMtoM (double input)
+    {
+        m_mm(input);
+        return inM;
+    }
+    public double convertMtoMile (double input)
+    {
+        m_mile(input);
+        return inMile;
+    }
 
-
-
-
-
-
-
-
-
-
+    public double convertMiletoM (double input)
+    {
+        m_mile(input);
+        return inM;
+    }
 
 }
