@@ -17,6 +17,23 @@ public class Length {
     private final double METER_TO_MMETER = 1000;
     private final double METER_TO_KMETER = 0.001;
 
+    public void m_cm (double input)
+    {
+        inCmeter = input * METER_TO_CMETER;
+        inM = input / METER_TO_CMETER;
+    }
+
+    public void m_mm (double input)
+    {
+        inMmeter = input * METER_TO_MMETER;
+        inM = input / METER_TO_MMETER;
+    }
+
+    public void m_km (double input)
+    {
+        inKmeter = input * METER_TO_KMETER;
+        inM = input / METER_TO_KMETER;
+    }
 
     public void m_inch(double input) {
         inInch = input * METER_TO_INCH;
@@ -34,23 +51,80 @@ public class Length {
     }
 
     public void m_yard(double input) {
-        double inyard = input * METER_TO_YARD;
+        inYard = input * METER_TO_YARD;
+        inM = input / METER_TO_YARD;
     }
 
 
     public void cm_inch(double input) {
-        double ininch = input * METER_TO_INCH / METER_TO_CMETER;
+        inInch = input * METER_TO_INCH / METER_TO_CMETER;
+        inCmeter = input / METER_TO_INCH * METER_TO_CMETER;
     }
 
-    public void cm_oot(double input) {
-        double infoot = input * METER_TO_FOOT / METER_TO_CMETER;
+    public void cm_foot(double input) {
+        inFoot = input * METER_TO_FOOT / METER_TO_CMETER;
+        inCmeter = input / METER_TO_FOOT * METER_TO_CMETER;
     }
 
     public void cm_mile(double input) {
-        double inmile = input * METER_TO_MILE / METER_TO_CMETER;
+        inMile = input * METER_TO_MILE / METER_TO_CMETER;
+        inCmeter = input / METER_TO_MILE * METER_TO_CMETER;
     }
 
     public void cm_yard(double input) {
-        double inyard = input * METER_TO_YARD / METER_TO_CMETER;
+        inYard = input * METER_TO_YARD / METER_TO_CMETER;
+        inCmeter = input / METER_TO_YARD * METER_TO_CMETER;
     }
+
+    public void cm_mm (double input)
+    {
+        inMmeter = input / METER_TO_CMETER * METER_TO_MMETER;
+        inCmeter = input * METER_TO_CMETER / METER_TO_MMETER;
+    }
+
+    public void cm_km (double input)
+    {
+        inKmeter = input / METER_TO_CMETER * METER_TO_KMETER;
+        inCmeter = input * METER_TO_CMETER / METER_TO_KMETER;
+    }
+
+    public void mm_inch (double input)
+    {
+        inInch = input / METER_TO_MMETER * METER_TO_INCH;
+        inMmeter = input * METER_TO_MMETER / METER_TO_INCH;
+    }
+
+    public void mm_mile (double input)
+    {
+        inMile = input / METER_TO_MMETER * METER_TO_MILE;
+        inMmeter = input * METER_TO_MMETER / METER_TO_MILE;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
