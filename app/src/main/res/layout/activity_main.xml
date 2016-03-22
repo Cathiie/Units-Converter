@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ucl.xulian.convertor.MainActivity"
+    tools:context="com.ucl.converter.MainActivity"
     android:rowCount="11"
     android:columnCount="6"
     android:orientation="vertical">
@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Time"
-        android:id="@+id/button5"
+        android:id="@+id/TimeConverter"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"

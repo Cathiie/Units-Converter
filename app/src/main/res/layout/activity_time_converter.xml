@@ -19,14 +19,10 @@
         android:editable="true"
         android:elegantTextHeight="false"
         android:height="50dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginRight="92dp"
-        android:layout_marginEnd="92dp"
         android:backgroundTint="#648fa7"
+        android:digits="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:digits="true"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,8 +65,7 @@
         android:editable="false"
         android:elegantTextHeight="false"
         android:height="50dp"
-        android:layout_alignTop="@+id/editHours"
-        android:layout_toLeftOf="@+id/editHours"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -112,11 +107,10 @@
         android:editable="false"
         android:elegantTextHeight="false"
         android:height="50dp"
-        android:layout_marginTop="62dp"
+        android:digits="true"
         android:layout_below="@+id/buttonConvertfromHMS"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:digits="true"/>
+        android:layout_alignParentStart="true" />
 
 
     <TextView
@@ -129,11 +123,9 @@
         android:editable="true"
         android:elegantTextHeight="false"
         android:height="50dp"
-        android:layout_alignTop="@+id/textView10"
-        android:layout_alignLeft="@+id/editSeconds"
-        android:layout_alignStart="@+id/editSeconds"
-        android:layout_alignRight="@+id/editSeconds"
-        android:layout_alignEnd="@+id/editSeconds" />
+        android:layout_below="@+id/buttonConvertfromHMS"
+        android:layout_toRightOf="@+id/buttonConvertfromHMS"
+        android:layout_toEndOf="@+id/buttonConvertfromHMS" />
 
     <Button
         android:layout_width="wrap_content"
@@ -142,29 +134,15 @@
         android:id="@+id/buttonConvertfromHMS"
         android:layout_below="@+id/editSeconds"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Convert to Hours, Minutes and Seconds"
         android:id="@+id/buttonConvertSeconds"
-        android:layout_below="@+id/textView10"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back to main menu"
-        android:id="@+id/button8"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/buttonConvertSeconds"
-        android:layout_alignEnd="@+id/buttonConvertSeconds" />
 </RelativeLayout>

@@ -13,7 +13,7 @@ public class Time {
         int minutes = modMinutes / 60;
         modSeconds = modMinutes % 60;
 
-        int secondsEquivalent = (hours * 60 * 60) + (minutes * 60) + seconds;
+        int secondsEquivalent = (hours * 60 * 60) + (minutes * 60) + outSeconds;
 
 
     }
