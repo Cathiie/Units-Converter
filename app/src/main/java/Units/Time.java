@@ -6,10 +6,10 @@ package Units;
 public class Time {
     public static void main(String[] args)
     {
-       int seconds,  modMinutes, modSeconds;
+       int inSeconds, seconds,  modMinutes, modSeconds;
 
-        int hours = seconds / 3600;
-        modMinutes = seconds % 3600;
+        int hours = inSeconds / 3600;
+        modMinutes = inSeconds % 3600;
         int minutes = modMinutes / 60;
         modSeconds = modMinutes % 60;
 
