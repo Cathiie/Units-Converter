@@ -3,7 +3,7 @@ package Units;
 /**
  * Created by Cathy on 21/03/2016.
  */
-public class Weight {
+public class Mass {
 
     // Conversion factors
     private static double grainToGrammes = 0.06479891;
