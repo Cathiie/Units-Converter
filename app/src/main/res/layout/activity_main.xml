@@ -32,4 +32,52 @@
         android:textStyle="bold"
         android:onClick="TemperatureActivity" />
 
+    <Button
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        android:id="@+id/button3"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:onClick="PressureActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Weight"
+        android:id="@+id/button4"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:onClick="WeightActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:id="@+id/button5"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:onClick="TimeActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your own conversion factor"
+        android:id="@+id/button9"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:onClick="TimeActivity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:id="@+id/button10"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:onClick="TimeActivity" />
+
 </LinearLayout>
