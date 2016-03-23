@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity implements  {
         startActivity(intent);
     }
 
+    public void MassActivity(View view) {
+        Intent intent = new Intent(this, MassConverter.class);
+        startActivity(intent);
+    }
+
+    public void TimeActivity(View view) {
+        Intent intent = new Intent(this, TimeConverter.class);
+        startActivity(intent);
+    }
 
 
     @Override
@@ -69,26 +78,6 @@ public class MainActivity extends AppCompatActivity implements  {
     Button Time = (Button) findViewById(R.id.Time);
 
 
-    Length.setOnClickListener(new View.OnClickListener() {
-
-        public void onClick (View) {
-            startActivity(new Intent(MainActivity.this, LengthConverter.class));
-        }
-    };
-
-    Mass.setOnClickListener(new View.OnClickListener() {
-
-        public void onClick(View view) {
-            startActivity(new Intent(MainActivity.this, MassConverter.class));
-        }
-    };
-
-    Time.setOnClickListener(new View.OnClickListener() {
-
-        public void onClick(View view) {
-            startActivity(new Intent(MainActivity.this, TimeConverter.class));
-        }
-    };
 
 
 }
