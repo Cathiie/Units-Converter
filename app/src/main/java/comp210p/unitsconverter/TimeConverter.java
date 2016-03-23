@@ -32,10 +32,16 @@ public class TimeConverter extends AppCompatActivity {
 
         Button buttonConvertSeconds = (Button) findViewById(R.id.buttonConvertSeconds);
 
-        buttonConvertfromHMS.setOnTouchListener(new OnTouchListener() {
+        public void setFocusableInTouchMode (boolean focusableInTouchMode) {
+        if (focusableInTouchMode == true);
+        HMSToSec(onTouchEvent(View v, MotionEvent event));
 
-            @Override
-            public void onTouch(View v, MotionEvent event) {
+        }
+
+
+
+
+            public void HMSToSec(View v, MotionEvent event) {
 
                 final TextView editHours = (TextView) findViewById(R.id.editHours);
 
