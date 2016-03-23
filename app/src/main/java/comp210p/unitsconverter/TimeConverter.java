@@ -25,19 +25,19 @@ public class TimeConverter extends AppCompatActivity {
         setContentView(R.layout.activity_time_converter);
 
 
-        final EditText editHours = findViewById(R.id.editHours);
+        final EditText editHours = (EditText) findViewById(R.id.editHours);
 
-        final EditText editMinutes = findViewById(R.id.editMinutes);
+        final EditText editMinutes = (EditText) findViewById(R.id.editMinutes);
 
-        final EditText editSeconds = findViewById(R.id.editSeconds);
+        final EditText editSeconds = (EditText) findViewById(R.id.editSeconds);
 
-        Button buttonConvertfromHMS = findViewById(R.id.buttonConvertfromHMS);
+        Button buttonConvertfromHMS = (Button) findViewById(R.id.buttonConvertfromHMS);
 
         buttonConvertfromHMS.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                int hours = valueOf(editHours.getText().toString());
+
 
 
             }

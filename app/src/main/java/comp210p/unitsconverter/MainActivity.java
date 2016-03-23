@@ -20,6 +20,11 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends AppCompatActivity {
 
     //call LengthConverter class
+
+
+
+
+
     public void LengthActivity(View view) {
         Intent intent = new Intent(this, LengthConverter.class);
         startActivity(intent);
@@ -67,11 +72,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    Button Length = (Button) findViewById(R.id.Length);
 
-    Button Mass = (Button) findViewById(R.id.Mass);
 
-    Button Time = (Button) findViewById(R.id.Time);
+
 
 
 

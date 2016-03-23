@@ -17,6 +17,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class LengthConverter extends AppCompatActivity {
+    //--------------------------
     private static final DecimalFormat df = new DecimalFormat("#.00");
 
     static Spinner spinner01;
@@ -31,7 +32,7 @@ public class LengthConverter extends AppCompatActivity {
 
     public final double[] ConverterFactor = {0.001, 1, 10, 100, 1000, 0.0006213711922, 1.093613298, 3.280839895, 39.37007874};
     private final String[] Unitsymbol = {"km","m","dm","cm","mm","mi","yd","ft","in"};
-
+    //-------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
