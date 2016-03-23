@@ -17,7 +17,7 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  {
 
     //call LengthConverter class
     public void LengthActivity(View view) {
@@ -62,7 +62,33 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    Button Length = (Button) findViewById(R.id.Length);
 
+    Button Mass = (Button) findViewById(R.id.Mass);
+
+    Button Time = (Button) findViewById(R.id.Time);
+
+
+    Length.setOnClickListener(new View.OnClickListener() {
+
+        public void onClick (View) {
+            startActivity(new Intent(MainActivity.this, LengthConverter.class));
+        }
+    };
+
+    Mass.setOnClickListener(new View.OnClickListener() {
+
+        public void onClick(View view) {
+            startActivity(new Intent(MainActivity.this, MassConverter.class));
+        }
+    };
+
+    Time.setOnClickListener(new View.OnClickListener() {
+
+        public void onClick(View view) {
+            startActivity(new Intent(MainActivity.this, TimeConverter.class));
+        }
+    };
 
 
 }

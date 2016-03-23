@@ -16,7 +16,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="Length"
-        android:id="@+id/button1"
+        android:id="@+id/Length"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="Temperature"
-        android:id="@+id/button2"
+        android:id="@+id/Temperature"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"
@@ -36,7 +36,7 @@
         android:layout_width="353dp"
         android:layout_height="wrap_content"
         android:text="Pressure"
-        android:id="@+id/button3"
+        android:id="@+id/Pressure"
         android:enabled="true"
         android:textStyle="bold"
         android:onClick="PressureActivity" />
@@ -44,18 +44,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Weight"
-        android:id="@+id/button4"
+        android:text="Mass"
+        android:id="@+id/Mass"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"
-        android:onClick="WeightActivity" />
+        android:onClick="MassActivity" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Time"
-        android:id="@+id/TimeConverter"
+        android:id="@+id/Time"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Your own conversion factor"
-        android:id="@+id/button9"
+        android:id="@+id/OwnConverter"
         android:layout_gravity="center_horizontal"
         android:enabled="true"
         android:textStyle="bold"
@@ -75,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="History"
-        android:id="@+id/button10"
+        android:id="@+id/History"
         android:enabled="true"
         android:textStyle="bold"
         android:onClick="TimeActivity" />
