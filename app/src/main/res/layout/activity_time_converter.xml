@@ -22,7 +22,9 @@
         android:backgroundTint="#648fa7"
         android:digits="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:focusableInTouchMode="true"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +39,8 @@
         android:layout_below="@+id/editHours"
         android:layout_alignLeft="@+id/editHours"
         android:layout_alignStart="@+id/editHours"
-        android:digits="true"/>
+        android:digits="true"
+        android:focusableInTouchMode="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,7 +55,8 @@
         android:layout_below="@+id/editMinutes"
         android:layout_alignLeft="@+id/editMinutes"
         android:layout_alignStart="@+id/editMinutes"
-        android:digits="true"/>
+        android:digits="true"
+        android:focusableInTouchMode="true" />
 
 
     <TextView
@@ -124,9 +128,10 @@
         android:elegantTextHeight="false"
         android:height="50dp"
         android:layout_below="@+id/buttonConvertfromHMS"
-        android:layout_toRightOf="@+id/buttonConvertfromHMS"
-        android:layout_toEndOf="@+id/buttonConvertfromHMS" />
-
+        android:layout_toEndOf="@+id/buttonConvertfromHMS"
+        android:layout_alignLeft="@+id/editSeconds"
+        android:layout_alignStart="@+id/editSeconds"
+        android:focusableInTouchMode="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -134,7 +139,8 @@
         android:id="@+id/buttonConvertfromHMS"
         android:layout_below="@+id/editSeconds"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusableInTouchMode="true"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -143,6 +149,7 @@
         android:id="@+id/buttonConvertSeconds"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusableInTouchMode="true"/>/>
 
 </RelativeLayout>
