@@ -24,7 +24,16 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".TimeConverter"></activity>
+        <activity android:name=".TimeConverter" />
+        <activity
+            android:name=".MassConverter"
+            android:label="@string/title_activity_mass_converter"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp210p.unitsconverter.MainMenu" />
+        </activity>
     </application>
 
 </manifest>

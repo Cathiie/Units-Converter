@@ -19,5 +19,20 @@
         <item>Inch</item>
 
     </string-array>
+    <string name="title_activity_mass_converter">MassConverter</string>
+    <string name="API_key">http://api.fixer.io/latest</string>
+    <string-array name="UnitMass">
+
+        <item>Kilometer</item>
+        <item>Meter</item>
+        <item>Decimeter</item>
+        <item>Centimeter</item>
+        <item>Millimeter</item>
+        <item>Mile</item>
+        <item>Yard</item>
+        <item>Feet</item>
+        <item>Inch</item>
+
+    </string-array>
 
 </resources>
