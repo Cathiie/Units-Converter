@@ -13,7 +13,7 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:text="Length"
         android:id="@+id/Length"
@@ -23,7 +23,7 @@
         android:onClick="LengthActivity" />
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:text="Temperature"
         android:id="@+id/Temperature"
@@ -33,7 +33,7 @@
         android:onClick="TemperatureActivity" />
 
     <Button
-        android:layout_width="353dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pressure"
         android:id="@+id/Pressure"
