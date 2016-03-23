@@ -8,12 +8,6 @@ public class Time {
     {
        int inSeconds, seconds,  modMinutes, modSeconds;
 
-        int hours = inSeconds / 3600;
-        modMinutes = inSeconds % 3600;
-        int minutes = modMinutes / 60;
-        modSeconds = modMinutes % 60;
-
-        int secondsEquivalent = (hours * 60 * 60) + (minutes * 60) + outSeconds;
 
 
     }
