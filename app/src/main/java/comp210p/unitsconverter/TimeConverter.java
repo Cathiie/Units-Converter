@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -25,15 +26,17 @@ public class TimeConverter extends AppCompatActivity {
         setContentView(R.layout.activity_time_converter);
 
 
-        final EditText editHours = (EditText) findViewById(R.id.editHours);
+        final TextView editHours = (TextView) findViewById(R.id.editHours);
 
-        final EditText editMinutes = (EditText) findViewById(R.id.editMinutes);
+        final TextView editMinutes = (TextView) findViewById(R.id.editMinutes);
 
-        final EditText editSeconds = (EditText) findViewById(R.id.editSeconds);
+        final TextView editSeconds = (TextView) findViewById(R.id.editSeconds);
 
-        final EditText editSecondsBackwards = (EditText) findViewById(R.id.editSecondsBackwards);
+        final TextView editSecondsBackwards = (TextView) findViewById(R.id.editSecondsBackwards);
 
         Button buttonConvertfromHMS = (Button) findViewById(R.id.buttonConvertfromHMS);
+
+        Button buttonConvertSeconds = (Button) findViewById(R.id.buttonConvertSeconds);
 
         buttonConvertfromHMS.setOnClickListener(new View.OnClickListener() {
 
@@ -46,6 +49,25 @@ public class TimeConverter extends AppCompatActivity {
                 int secondsEquivalent = (hours * 60 * 60) + (minutes * 60) + Seconds;
 
                 editSecondsBackwards.setText(String.valueOf(secondsEquivalent));
+
+            }
+        });
+
+        buttonConvertSeconds.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                int Seconds = Integer.valueOf(editSecondsBackwards.getText().toString());
+                int modMinutes, modSeconds;
+
+                int hours = Seconds / 3600;
+                modMinutes = Seconds % 3600;
+                int minutes = modMinutes / 60;
+                modSeconds = modMinutes % 60;
+
+                editHours.setText(String.valueOf(hours));
+                editMinutes.setText(String.valueOf(minutes));
+                editSeconds.setText(String.valueOf(modSeconds));
 
             }
         });
