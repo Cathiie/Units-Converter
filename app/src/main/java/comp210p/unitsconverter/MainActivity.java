@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void LengthActivity(View view) {
         Intent intent = new Intent(this, LengthConverter.class);
         startActivity(intent);
+
     }
 
     public void MassActivity(View view) {

@@ -24,16 +24,6 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:text="Temperature"
-        android:id="@+id/Temperature"
-        android:layout_gravity="center_horizontal"
-        android:enabled="true"
-        android:textStyle="bold"
-        android:onClick="TemperatureActivity" />
-
-    <Button
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Mass"
         android:id="@+id/Mass"
