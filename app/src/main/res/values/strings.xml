@@ -20,17 +20,15 @@
 
     </string-array>
     <string name="title_activity_mass_converter">MassConverter</string>
-    <string-array name="UnitMass">
+    <string-array name="unitMass">
 
-        <item>Kilometer</item>
-        <item>Meter</item>
-        <item>Decimeter</item>
-        <item>Centimeter</item>
-        <item>Millimeter</item>
-        <item>Mile</item>
-        <item>Yard</item>
-        <item>Feet</item>
-        <item>Inch</item>
+        <item>Grain</item>
+        <item>Ounce</item>
+        <item>Pound</item>
+        <item>Ton</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Milligrams</item>
 
     </string-array>
 
