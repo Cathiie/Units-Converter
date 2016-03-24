@@ -21,7 +21,9 @@
         android:id="@+id/editHours"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"/>
 
 
     <EditText
@@ -34,7 +36,9 @@
         android:id="@+id/editMinutes"
         android:layout_below="@+id/textView7"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -46,7 +50,9 @@
         android:id="@+id/editSeconds"
         android:layout_alignBottom="@+id/textView9"
         android:layout_alignLeft="@+id/editMinutes"
-        android:layout_alignStart="@+id/editMinutes" />
+        android:layout_alignStart="@+id/editMinutes"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"/>
 
 
     <TextView
@@ -117,7 +123,9 @@
         android:id="@+id/editSecondsBackwards"
         android:layout_above="@+id/buttonConvertSeconds"
         android:layout_alignLeft="@+id/editSeconds"
-        android:layout_alignStart="@+id/editSeconds" />
+        android:layout_alignStart="@+id/editSeconds"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"/>
 
 
     <Button
