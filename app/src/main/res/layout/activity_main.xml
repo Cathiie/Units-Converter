@@ -34,15 +34,6 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pressure"
-        android:id="@+id/Pressure"
-        android:enabled="true"
-        android:textStyle="bold"
-        android:onClick="PressureActivity" />
-
-    <Button
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Mass"
         android:id="@+id/Mass"
@@ -57,25 +48,6 @@
         android:text="Time"
         android:id="@+id/Time"
         android:layout_gravity="center_horizontal"
-        android:enabled="true"
-        android:textStyle="bold"
-        android:onClick="TimeActivity" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your own conversion factor"
-        android:id="@+id/OwnConverter"
-        android:layout_gravity="center_horizontal"
-        android:enabled="true"
-        android:textStyle="bold"
-        android:onClick="TimeActivity" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="History"
-        android:id="@+id/History"
         android:enabled="true"
         android:textStyle="bold"
         android:onClick="TimeActivity" />
