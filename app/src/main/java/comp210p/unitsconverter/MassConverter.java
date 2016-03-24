@@ -1,5 +1,5 @@
 package comp210p.unitsconverter;
-
+//Created by Catherine
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
