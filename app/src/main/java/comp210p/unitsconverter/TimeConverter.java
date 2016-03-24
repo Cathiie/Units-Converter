@@ -41,7 +41,7 @@ public class TimeConverter extends AppCompatActivity {
 
                 int hours = Integer.parseInt(editHours.getText().toString());
                 int minutes = Integer.parseInt(editMinutes.getText().toString());
-                int seconds = Integer.parseInt(editHours.getText().toString());
+                int seconds = Integer.parseInt(editSeconds.getText().toString());
                 int secondsOut = (hours * 60 * 60) + (minutes * 60) + seconds;
 
                 EditText display = (EditText) findViewById(R.id.editSecondsBackwards);
