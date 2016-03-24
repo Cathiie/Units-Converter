@@ -106,7 +106,7 @@ public class MassConverter extends AppCompatActivity {
             outputText.setText(String.valueOf(df.format(outputNum)));
         }
         catch (NumberFormatException e) {
-            outputText.setText("\uD83D\uDCA9");
+            outputText.setText("");
         }
     }
 
