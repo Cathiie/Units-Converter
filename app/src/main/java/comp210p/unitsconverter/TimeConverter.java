@@ -1,4 +1,5 @@
 package comp210p.unitsconverter;
+//Created by Catherine
 
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -24,67 +26,59 @@ public class TimeConverter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_converter);
 
+        //Buttons for user to start conversion
+        Button buttonConvertFromHMS = (Button) findViewById(R.id.buttonConvertfromHMS);
 
-        final EditText editHours = (EditText) findViewById(R.id.editHours);
+        Button buttonConvertSeconds = (Button) findViewById(R.id.buttonConvertSeconds);
 
-        final EditText editMinutes = (EditText) findViewById(R.id.editMinutes);
-
-        final EditText editSeconds = (EditText) findViewById(R.id.editSeconds);
-
-        Button buttonConvertfromHMS = (Button) findViewById(R.id.buttonConvertfromHMS);
-
-        buttonConvertfromHMS.setOnClickListener(new View.OnClickListener() {
+        buttonConvertFromHMS.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                EditText editHours = (EditText) findViewById(R.id.editHours);
+                EditText editMinutes = (EditText) findViewById(R.id.editMinutes);
+                EditText editSeconds = (EditText) findViewById(R.id.editSeconds);
 
+                int hours = Integer.parseInt(editHours.getText().toString());
+                int minutes = Integer.parseInt(editMinutes.getText().toString());
+                int seconds = Integer.parseInt(editHours.getText().toString());
+                int secondsOut = (hours * 60 * 60) + (minutes * 60) + seconds;
+
+                EditText display = (EditText) findViewById(R.id.editSecondsBackwards);
+                display.setText("" + (secondsOut));
 
 
             }
         });
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
+        buttonConvertSeconds.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    public void onStart() {
-        super.onStart();
+            @Override
+            public void onClick(View v) {
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "TimeConverter Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://comp210p.unitsconverter/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
+                EditText editSecondsBackwards = (EditText) findViewById(R.id.editSecondsBackwards);
 
-    @Override
-    public void onStop() {
-        super.onStop();
+                int seconds = Integer.parseInt(editSecondsBackwards.getText().toString());
+                int modMinutes, secondsOut;
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "TimeConverter Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://comp210p.unitsconverter/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
+                int hours = seconds / 3600;
+                modMinutes = seconds % 3600;
+                int minutes = modMinutes / 60;
+                secondsOut = modMinutes % 60;
+
+                EditText display = (EditText) findViewById(R.id.editHours);
+                display.setText("" + (hours));
+
+                display = (EditText) findViewById(R.id.editMinutes);
+                display.setText("" + (minutes));
+
+                display = (EditText) findViewById(R.id.editSeconds);
+                display.setText("" + (secondsOut));
+
+
+            }
+        });
+
+
     }
 }
