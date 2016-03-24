@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.ThemedSpinnerAdapter;
 
 
 import java.text.DecimalFormat;
@@ -54,6 +55,7 @@ public class LengthConverter extends AppCompatActivity {
         spinner02.setAdapter(adapter);
 
 
+        //spinner listener, do convertion when select a new units
         spinner01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -81,14 +83,17 @@ public class LengthConverter extends AppCompatActivity {
 
 
 
-        //refer
+        //textview define
         outputText = (TextView) findViewById(R.id.textView5);
         firstunitsymbol = (TextView) findViewById(R.id.textView);
         secondunitsymbol = (TextView) findViewById(R.id.textView2);
 
 
+
+        //define edit box
         EditText amountEditText1 = (EditText) findViewById(R.id.editText);
 
+        //do convertion when entering values
         amountEditText1.addTextChangedListener(amountEditTextWatcher);
 
 
@@ -132,12 +137,13 @@ public class LengthConverter extends AppCompatActivity {
                 CharSequence s, int start, int count, int after) { }
     };
 
-    //----------------------------------------------
+    //--------------------------------
     //Calculation of the convertion
-    //
-    //---------------
+    //--------------------------------
         private void calculate() {
             double outputNum=0;
+
+
 
             firstunit = spinner01.getSelectedItem().toString();
             UnitIndex01 = getIndex(firstunit);
@@ -149,12 +155,16 @@ public class LengthConverter extends AppCompatActivity {
             double factor1=ConverterFactor[UnitIndex01];
             double factor2=ConverterFactor[UnitIndex02];
             outputNum = inputnum/factor1*factor2;
+            if (inputnum==0)
+                outputText.setText("");
+            else
             outputText.setText(String.valueOf(df.format(outputNum)));
 
         }
 
 
 
+    //set index for arrays
     private int getIndex(String text) {
 
         switch (text) {
