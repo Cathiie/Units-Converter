@@ -32,5 +32,15 @@
 
     </string-array>
 
+    <string name="title_activity_temp_converter">MassConverter</string>
+    <string-array name="unitTemp">
+
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+
+
+    </string-array>
+
 
 </resources>

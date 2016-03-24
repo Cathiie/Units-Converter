@@ -32,21 +32,33 @@
         android:textStyle="bold"
         android:onClick="MassActivity" />
 
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Time"
-        android:id="@+id/Time"
-        android:layout_gravity="center_horizontal"
-        android:enabled="true"
-        android:textStyle="bold"
-        android:onClick="TimeActivity" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Temperature"
-        android:id="@+id/button"
-        android:onClick="TemperatureActivity" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:id="@+id/Time"
+            android:layout_gravity="center_horizontal"
+            android:enabled="true"
+            android:textStyle="bold"
+            android:onClick="TimeActivity" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:id="@+id/button"
+            android:onClick="TemperatureActivity" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -43,11 +43,12 @@ public class TemperatureConverter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mass_converter);
+        setContentView(R.layout.activity_temperature_converter);
+
 //set spinner list and layout
         spinner01 = (Spinner) findViewById(R.id.spinner);
         spinner02 = (Spinner) findViewById(R.id.spinner2);
-        adapter = ArrayAdapter.createFromResource(this, R.array.unitMass, android.R.layout.simple_spinner_item);
+        adapter = ArrayAdapter.createFromResource(this, R.array.unitTemp, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner01.setAdapter(adapter);
         spinner02.setAdapter(adapter);

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void TemperatureActivity(View view) {
-        Intent intent = new Intent(this, TimeConverter.class);
+        Intent intent = new Intent(this, TemperatureConverter.class);
         startActivity(intent);
     }
 
