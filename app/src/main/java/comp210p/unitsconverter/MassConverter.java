@@ -36,44 +36,32 @@ public class MassConverter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mass_converter);
-
 
         //set spinner list and layout
         spinner1 = (Spinner) findViewById(R.id.spinner);
         spinner2 = (Spinner) findViewById(R.id.spinner2);
-
 
         adapter = ArrayAdapter.createFromResource(this, R.array.unitMass, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adapter);
 
-
         spinner2.setAdapter(adapter);
 
-
+//        spinner1.seton
 
         //refer
         outputText = (TextView) findViewById(R.id.textDisplay);
-        firstUnitSymbol = (TextView) findViewById(R.id.firstMass);
-        secondUnitSymbol = (TextView) findViewById(R.id.secondMass);
+        firstUnitSymbol = (TextView) findViewById(R.id.firstUnitSymbol);
+        secondUnitSymbol = (TextView) findViewById(R.id.secondUnitSymbol);
 
 
-        EditText amountEditText1 = (EditText) findViewById(R.id.editText);
+        EditText amountEditText1 = (EditText) findViewById(R.id.firstMass);
         amountEditText1.addTextChangedListener(amountEditTextWatcher);
 
     }
-
-
-
-
-
-
-
 
     //
     //get the value in inputText
@@ -93,8 +81,6 @@ public class MassConverter extends AppCompatActivity {
                 outputText.setText("");
 
             }
-
-
         }
 
         @Override
