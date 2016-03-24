@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--//Created by Catherine-->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context="comp210p.unitsconverter.MassConverter"
     android:baselineAligned="false"
     android:orientation="vertical">
@@ -22,8 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:hint="Enter integer..."
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/firstMass"
             android:layout_gravity="center_horizontal" />
 
         <TextView
@@ -52,12 +52,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <EditText
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textDisplay" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:hint="Enter integer..."
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/secondMass"
             android:layout_gravity="center_horizontal" />
 
         <TextView
