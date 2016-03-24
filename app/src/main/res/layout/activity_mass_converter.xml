@@ -30,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView"
+            android:text="UnitSymbol1"
+            android:id="@+id/firstUnitSymbol"
             android:layout_gravity="top|right" />
 
         <LinearLayout
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:hint="Enter integer..."
+            android:hint="Result"
             android:ems="10"
             android:id="@+id/secondMass"
             android:layout_gravity="center_horizontal" />
@@ -71,8 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView2"
+            android:text="UnitSymbol2"
+            android:id="@+id/secondUnitSymbol"
             android:layout_gravity="top|right" />
 
         <LinearLayout
