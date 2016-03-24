@@ -115,9 +115,9 @@
         android:hint="Or enter integer here..."
         android:ems="10"
         android:id="@+id/editSecondsBackwards"
-        android:layout_alignBottom="@+id/textView10"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/buttonConvertSeconds"
+        android:layout_alignLeft="@+id/editSeconds"
+        android:layout_alignStart="@+id/editSeconds" />
 
 
     <Button
