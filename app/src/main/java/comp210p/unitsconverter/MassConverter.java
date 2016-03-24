@@ -30,8 +30,8 @@ public class MassConverter extends AppCompatActivity {
     public TextView outputText=null,firstUnitSymbol, secondUnitSymbol;
 
 
-    public final double[] ConverterFactor = {0.06479891, 28.35, 1, 453.59237, 0.907185, 0.001, 1000};
-    private final String[] unitSymbol = {"Grain","Ounce","Ton", "Grams", "Kilograms","Milligrams"};
+    public final double[] ConverterFactor = {15.432358353, 0.03527396195, 0.0000011023113109 , 1, 0.001, 1000};
+    private final String[] unitSymbol = {"Grain","Ounce", "Pound", "Ton", "Grams", "Kilograms","Milligrams"};
 
 
     @Override
@@ -132,29 +132,29 @@ public class MassConverter extends AppCompatActivity {
 
         switch (text) {
             case "Grain":
-                UnitIndex = 0;
+                unitIndex = 0;
                 break;
             case "Ounce":
-                UnitIndex = 1;
+                unitIndex = 1;
                 break;
             case "Pound":
-                UnitIndex = 2;
+                unitIndex = 2;
                 break;
             case "Ton":
-                UnitIndex = 3;
+                unitIndex = 3;
                 break;
             case "Grams":
-                UnitIndex = 4;
+                unitIndex = 4;
                 break;
             case "Kilograms":
-                UnitIndex = 5;
+                unitIndex = 5;
                 break;
             case "Milligrams":
-                UnitIndex = 6;
+                unitIndex = 6;
                 break;
 
         }
-        return UnitIndex;
+        return unitIndex;
 
     }
 
