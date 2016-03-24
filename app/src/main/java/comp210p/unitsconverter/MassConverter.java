@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 
 public class MassConverter extends AppCompatActivity {
-    private static final DecimalFormat df = new DecimalFormat("#.000");
+    private static final DecimalFormat df = new DecimalFormat("0.00000");
 
     static Spinner spinner1;
     static Spinner spinner2;
@@ -29,10 +29,17 @@ public class MassConverter extends AppCompatActivity {
     public double inputNum,outputNum;
     public TextView outputText=null,firstUnitSymbol, secondUnitSymbol;
 
-
-    public final double[] ConverterFactor = {15.432358353, 0.03527396195, 0.0000011023113109 , 1, 0.001, 1000};
-    private final String[] unitSymbol = {"Grain","Ounce", "Pound", "Ton", "Grams", "Kilograms","Milligrams"};
-
+    // multiply by this to convert from grams
+    public final double[] ConverterFactor =
+            {15.432358353, 0.03527396195,
+                    0.0022046, 0.0000011023113109 ,
+                    1, 0.001,
+                    1000};
+    private final String[] unitSymbol =
+            {"Grain","Ounce",
+                    "Pound", "Ton",
+                    "Grams", "Kilograms",
+                    "Milligrams"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,40 +54,41 @@ public class MassConverter extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(adapter);
-
         spinner2.setAdapter(adapter);
-
-//        spinner1.seton
 
         //refer
         outputText = (TextView) findViewById(R.id.textDisplay);
         firstUnitSymbol = (TextView) findViewById(R.id.firstUnitSymbol);
         secondUnitSymbol = (TextView) findViewById(R.id.secondUnitSymbol);
 
-
+        // update output when text changes
         EditText amountEditText1 = (EditText) findViewById(R.id.firstMass);
         amountEditText1.addTextChangedListener(amountEditTextWatcher);
 
+        // update output when dropdowns changed
+        spinner1.setOnItemSelectedListener(MyOnItemSelectedListener);
+        spinner2.setOnItemSelectedListener(MyOnItemSelectedListener);
+
     }
 
-    //
-    //get the value in inputText
-    //
+    private final AdapterView.OnItemSelectedListener MyOnItemSelectedListener = new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            doConversion();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+            // stackoverflow told me to do this, possibly to prevent "method not found"?
+        }
+    };
+
+    // for user input box
     private final TextWatcher amountEditTextWatcher = new TextWatcher() {
         @Override
         public void onTextChanged(CharSequence s, int start,
                                   int before, int count) {
-
-            try {
-                inputNum = Double.parseDouble(s.toString());
-                outputNum = calculate(unitIndex1, unitIndex2);
-                outputText.setText(String.valueOf(df.format(outputNum)));
-            }
-            catch (NumberFormatException e) {
-
-                outputText.setText("");
-
-            }
+            doConversion();
         }
 
         @Override
@@ -91,29 +99,46 @@ public class MassConverter extends AppCompatActivity {
                 CharSequence s, int start, int count, int after) { }
     };
 
+    // calculate answer and display
+    private void doConversion() {
+        try {
+            outputNum = calculate();
+            outputText.setText(String.valueOf(df.format(outputNum)));
+        }
+        catch (NumberFormatException e) {
+            outputText.setText("\uD83D\uDCA9");
+        }
+    }
+
     //----------------------------------------------
     //Calculation for conversion
-    //---------------
-    private double calculate(int index1, int index2) {
+    //----------------------------------------------
+    private double calculate() {
         double outputNum=0;
 
+        // read input from user entry
+        EditText input = (EditText) findViewById(R.id.firstMass);
+        String s = input.getText().toString();
+        inputNum = Double.parseDouble(s);
+
+        // 'from' unit
         firstUnit = spinner1.getSelectedItem().toString();
         unitIndex1 = getIndex(firstUnit);
         firstUnitSymbol.setText(unitSymbol[unitIndex1]);
+
+        // 'to' unit
         secondUnit = spinner2.getSelectedItem().toString();
         unitIndex2 = getIndex(secondUnit);
         secondUnitSymbol.setText(unitSymbol[unitIndex2]);
 
-        double factor1=ConverterFactor[index1];
-        double factor2=ConverterFactor[index2];
+        double factor1=ConverterFactor[unitIndex1];
+        double factor2=ConverterFactor[unitIndex2];
         outputNum = inputNum/factor1*factor2;
-
 
         return outputNum;
     }
 
-    //get spinner string
-
+    //string to index
     private int getIndex(String text) {
 
         switch (text) {
@@ -138,13 +163,10 @@ public class MassConverter extends AppCompatActivity {
             case "Milligrams":
                 unitIndex = 6;
                 break;
+            //default:
 
         }
         return unitIndex;
 
     }
-
-
-
-
 }
