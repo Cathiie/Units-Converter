@@ -21,25 +21,27 @@ public class MainActivity extends AppCompatActivity {
 
     //call LengthConverter class
 
-
-
-
-
     public void LengthActivity(View view) {
         Intent intent = new Intent(this, LengthConverter.class);
         startActivity(intent);
 
     }
 
+      //call MassConverter class
+
     public void MassActivity(View view) {
         Intent intent = new Intent(this, MassConverter.class);
         startActivity(intent);
     }
+    
+    //call TimeConverter class
 
     public void TimeActivity(View view) {
         Intent intent = new Intent(this, TimeConverter.class);
         startActivity(intent);
     }
+
+    //call TemperatureConverter class
 
     public void TemperatureActivity(View view) {
         Intent intent = new Intent(this, TemperatureConverter.class);
