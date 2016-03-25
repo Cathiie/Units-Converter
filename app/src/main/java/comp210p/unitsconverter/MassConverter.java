@@ -36,10 +36,10 @@ public class MassConverter extends AppCompatActivity {
                     1, 0.001,
                     1000};
     private final String[] unitSymbol =
-            {"Grain","Ounce",
-                    "Pound", "Ton",
-                    "Grams", "Kilograms",
-                    "Milligrams"};
+            {"gr","oz",
+                    "lb", "t",
+                    "g", "kg",
+                    "mg"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
