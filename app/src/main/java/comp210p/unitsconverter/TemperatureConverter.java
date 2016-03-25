@@ -1,7 +1,8 @@
 package comp210p.unitsconverter;
 
 /**
- * Created by xulian on 24/03/2016.
+ * Created by Ali
+ * Has a compiling error
  */
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
