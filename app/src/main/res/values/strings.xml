@@ -32,7 +32,7 @@
 
     </string-array>
 
-    <string name="title_activity_temp_converter">MassConverter</string>
+    <string name="title_activity_temp_converter">TemperatureConverter</string>
     <string-array name="unitTemp">
 
         <item>Celsius</item>
